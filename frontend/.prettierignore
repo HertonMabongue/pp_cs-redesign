@@ -1,0 +1,10 @@
+# dependencies
+node_modules
+.next
+out
+build
+dist
+
+# generated
+*.min.js
+*.min.css
