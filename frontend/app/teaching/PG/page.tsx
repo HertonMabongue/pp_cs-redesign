@@ -178,7 +178,7 @@ export default function PGPage() {
       {/* ── HERO ── */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <Image
-          src="/assets/Postgraduate_hero.jpg"
+          src="/assets/postgraduate_hero.jpg"
           alt="Postgraduate programmes"
           fill
           priority

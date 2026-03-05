@@ -597,31 +597,47 @@ export default function NewsPage() {
                     {/* Card image area */}
                     <div
                       style={{
-                        height: "160px",
+                        height: "180px",
                         background:
                           "linear-gradient(135deg, #61223b 0%, #3a1524 100%)",
                         position: "relative",
                         flexShrink: 0,
+                        overflow: "hidden",
                       }}
                     >
-                      <div
-                        style={{
-                          position: "absolute",
-                          inset: 0,
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                        }}
-                      >
-                        <div
+                      {article.image ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={article.image}
+                          alt={article.title}
                           style={{
-                            width: 52,
-                            height: 52,
-                            borderRadius: "50%",
-                            background: "rgba(202,162,88,0.25)",
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                            objectPosition: "center",
+                            display: "block",
                           }}
                         />
-                      </div>
+                      ) : (
+                        <div
+                          style={{
+                            position: "absolute",
+                            inset: 0,
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <div
+                            style={{
+                              width: 52,
+                              height: 52,
+                              borderRadius: "50%",
+                              background: "rgba(202,162,88,0.25)",
+                            }}
+                          />
+                        </div>
+                      )}
                       <div
                         style={{
                           position: "absolute",
